@@ -154,21 +154,32 @@ function ContactPage() {
 
 function Field({ label, value, onChange, error, type = "text", placeholder, multiline }: { label: string; value: string; onChange: (v: string) => void; error?: string; type?: string; placeholder?: string; multiline?: boolean }) {
   const [focus, setFocus] = useState(false);
-  const Tag = (multiline ? "textarea" : "input") as "input";
+  const shared = "w-full bg-transparent px-4 py-3.5 text-sm text-white placeholder:text-slate-500 focus:outline-none";
   return (
     <div>
       <label className="mb-2 block text-[10px] uppercase tracking-[0.3em] text-ice/70">{label}</label>
       <div className={`relative rounded-xl border bg-slate-950/40 transition-all ${focus ? "border-electric shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)]" : error ? "border-destructive/60" : "border-ice/20"}`}>
-        <Tag
-          type={type}
-          value={value}
-          placeholder={placeholder}
-          onChange={(e) => onChange((e.target as HTMLInputElement).value)}
-          onFocus={() => setFocus(true)}
-          onBlur={() => setFocus(false)}
-          rows={multiline ? 4 : undefined}
-          className="w-full bg-transparent px-4 py-3.5 text-sm text-white placeholder:text-slate-500 focus:outline-none"
-        />
+        {multiline ? (
+          <textarea
+            value={value}
+            placeholder={placeholder}
+            onChange={(e) => onChange(e.target.value)}
+            onFocus={() => setFocus(true)}
+            onBlur={() => setFocus(false)}
+            rows={4}
+            className={shared}
+          />
+        ) : (
+          <input
+            type={type}
+            value={value}
+            placeholder={placeholder}
+            onChange={(e) => onChange(e.target.value)}
+            onFocus={() => setFocus(true)}
+            onBlur={() => setFocus(false)}
+            className={shared}
+          />
+        )}
       </div>
       <AnimatePresence>
         {error && <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="mt-1.5 text-[11px] text-destructive">{error}</motion.div>}
