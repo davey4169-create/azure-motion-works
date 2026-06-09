@@ -1,0 +1,81 @@
+// Premium luxury architecture video URLs (Pexels CDN, public).
+export const VIDEOS = {
+  hero: "https://videos.pexels.com/video-files/3773486/3773486-hd_1920_1080_25fps.mp4",
+  interior: "https://videos.pexels.com/video-files/7578541/7578541-hd_1920_1080_30fps.mp4",
+  exterior: "https://videos.pexels.com/video-files/8470919/8470919-uhd_2560_1440_30fps.mp4",
+  pool: "https://videos.pexels.com/video-files/2169880/2169880-hd_1920_1080_30fps.mp4",
+  drone: "https://videos.pexels.com/video-files/2034115/2034115-hd_1920_1080_30fps.mp4",
+  city: "https://videos.pexels.com/video-files/3015527/3015527-uhd_2560_1440_24fps.mp4",
+  living: "https://videos.pexels.com/video-files/7578548/7578548-hd_1920_1080_30fps.mp4",
+  night: "https://videos.pexels.com/video-files/2715412/2715412-hd_1920_1080_30fps.mp4",
+};
+
+export const PROPERTIES = [
+  {
+    id: "azure-cliffside",
+    name: "Azure Cliffside Estate",
+    location: "Malibu, California",
+    price: "$48,500,000",
+    beds: 7, baths: 9, sqft: "14,200",
+    type: "Mansion",
+    video: VIDEOS.exterior,
+    blurb: "A glass-clad sanctuary perched above the Pacific with infinity horizons and private beach access.",
+  },
+  {
+    id: "midnight-pavilion",
+    name: "Midnight Pavilion",
+    location: "Aspen, Colorado",
+    price: "$32,900,000",
+    beds: 6, baths: 8, sqft: "11,800",
+    type: "Chalet",
+    video: VIDEOS.night,
+    blurb: "Cantilevered concrete and walnut volumes carved into the alpine ridge — ski-in, fly-out.",
+  },
+  {
+    id: "celeste-villa",
+    name: "Villa Celeste",
+    location: "Côte d'Azur, France",
+    price: "€59,000,000",
+    beds: 9, baths: 11, sqft: "18,400",
+    type: "Villa",
+    video: VIDEOS.pool,
+    blurb: "A Riviera icon: heliport, vanishing-edge pool, and a private vineyard overlooking Saint-Tropez.",
+  },
+  {
+    id: "north-spire",
+    name: "North Spire Penthouse",
+    location: "Manhattan, New York",
+    price: "$74,000,000",
+    beds: 5, baths: 7, sqft: "9,600",
+    type: "Penthouse",
+    video: VIDEOS.city,
+    blurb: "Triplex sky-residence crowning Billionaires' Row with 360° glass and private elevator.",
+  },
+  {
+    id: "ocean-glass",
+    name: "Ocean Glass House",
+    location: "Palm Beach, Florida",
+    price: "$26,400,000",
+    beds: 6, baths: 7, sqft: "10,300",
+    type: "Mansion",
+    video: VIDEOS.interior,
+    blurb: "Frameless walls of glass dissolve into the Atlantic; designed by Pritzker laureate atelier.",
+  },
+  {
+    id: "alpine-vault",
+    name: "Alpine Vault Residence",
+    location: "Zermatt, Switzerland",
+    price: "CHF 41,000,000",
+    beds: 8, baths: 10, sqft: "13,100",
+    type: "Chalet",
+    video: VIDEOS.drone,
+    blurb: "Subterranean spa, Matterhorn-facing glass cube, and a private gondola descent.",
+  },
+];
+
+export const TEAM = [
+  { name: "Daphne Oxley", role: "Founder & Chief Curator", initials: "DO" },
+  { name: "Marcus Vance", role: "Head of Global Brokerage", initials: "MV" },
+  { name: "Selene Marchetti", role: "Director of Architecture", initials: "SM" },
+  { name: "Idris Hoffman", role: "Head of Asset Strategy", initials: "IH" },
+];
